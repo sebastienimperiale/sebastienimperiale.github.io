@@ -41,5 +41,9 @@
 
 {% include footer.html %}
 
+{% for script in page.scripts %}
+<script src="/assets/js/{{ script }}"></script>
+{% endfor %}
+
 </body>
 </html>

@@ -64,6 +64,7 @@ body {
   margin: 2px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.15s ease;
 }
 
 .tag:hover {
@@ -73,6 +74,10 @@ body {
 .tag.active {
   background-color: #bfba55;
   color: white;
+}
+
+.tag.active:hover {
+  background-color: #a8a33d;
 }
 
 .publication {
