@@ -1,31 +1,45 @@
----
-layout: compress
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% include base_path %}
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
 
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108246943-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-108246943-1');
+  </script>
+</head>
+<body>
 
-  <body>
+{% include header.html %}
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+{% unless page.no_banner %}
+<section id="home" style="position:relative; overflow:hidden;">
+  <img src="/assets/images/main-banner.jpg" style="width:100%; display:block;">
+  <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+    <h1 style="color:#000; margin:0;">{{ page.title }}</h1>
+  </div>
+</section>
+{% endunless %}
 
-    {{ content }}
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
+<section id="about">
+  <div class="container">
+    <div class="row">
+      {{ content }}
     </div>
+  </div>
+</section>
 
-    {% include scripts.html %}
+{% include footer.html %}
 
-  </body>
+</body>
 </html>

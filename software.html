@@ -1,0 +1,51 @@
+---
+layout: default
+title: Software
+---
+<div class="col-md-offset-1 col-md-10 col-sm-12">
+
+     <p><i>My research code OndoMathX is developed in close collaboration with <a href="https://www.cea.fr/">CEA-List/DISC</a>. Contributions from several PhD students are integrated in the core. The code is available upon request for academic collaborations.</i></p>
+
+     <hr class="solid">
+
+     <h3>OndoMathX</h3>
+
+     <div class="publication">
+
+          <p><b>OndoMathX</b> is a C++ research finite element solver developed primarily by myself, with contributions from several PhD students. It implements the <strong>Spectral Element Method</strong> (SEM) on hexahedral meshes for the efficient simulation of time-dependent wave propagation problems.</p>
+
+          <h4>Key features</h4>
+
+          <p><b>High-order spectral elements</b>: tensor-product Gauss-Lobatto quadrature on hexahedral meshes, exact mass-lumping yielding diagonal mass matrices, high-order geometric accuracy via parametric meshes.</p>
+
+          <p><b>Non-assembled computations</b>: matrix-free strategy exploiting the tensor-product structure for efficient matrix-vector products, low memory footprint.</p>
+
+          <p><b>Implicit-explicit (IMEX) time schemes</b>: time integration adapted to multi-scale hyperbolic problems, with provable stability properties independent of the stiffness parameter.</p>
+
+          <p><b>SEM-FFT coupling</b>: high-order spectral element FFT for efficient solving of elliptic problems on structured grids [22].</p>
+
+          <p><b>Perfectly Matched Layers (PML)</b>: absorbing boundary conditions for wave propagation in unbounded domains, including anisotropic and stabilized variants [1, 9, 23].</p>
+
+          <p><b>Boundary stabilization</b>: high-frequency parasitic mode suppression for exponentially stable observer discretizations [39].</p>
+
+          <h4>Applications implemented</h4>
+
+          <p>&bull; Isotropic and incompressible elastodynamics</p>
+          <p>&bull; Nearly-incompressible hyperelastic solids (cardiac tissue, cornea) [44, 45]</p>
+          <p>&bull; Acoustoelasticity: wave propagation in pre-stressed media [37]</p>
+          <p>&bull; Electromagnetism in coaxial cables [33]</p>
+          <p>&bull; Acoustic and gravito-acoustic wave propagation [35, 40]</p>
+          <p>&bull; Cardiac shear-wave elastography: ARF modelling [26]</p>
+          <p>&bull; Ultrasonic NDT in composite plates [34] and deformed pipes [37]</p>
+
+          <h4>Industrial transfer</h4>
+
+          <p>OndoMathX is developed in close scientific collaboration with <a href="https://www.cea.fr/">CEA-List/DISC</a> (Alexandre Imperiale), which integrates a parallel SEM kernel into the commercial inspection simulation software <b>CIVA</b>. Two CEA-funded industrial studies on wave diffraction from rough surfaces (~20k€ each) have directly leveraged the methods developed in OndoMathX.</p>
+
+          <h4>PhD student contributions</h4>
+
+          <p>F. Caforio, J. Dubois, G. Merlini, Z. Ramiche have contributed computational developments to OndoMathX as part of their PhD theses.</p>
+
+     </div>
+
+</div>
