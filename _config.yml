@@ -1,7 +1,2 @@
 name: Sébastien Imperiale
 markdown: kramdown
-collections:
-  blog:
-    output: true  
-plugins:
-  - jekyll-feed
