@@ -72,12 +72,12 @@ body {
 }
 
 .tag.active {
-  background-color: #bfba55;
+  background-color: #003366;
   color: white;
 }
 
 .tag.active:hover {
-  background-color: #a8a33d;
+  background-color: #002244;
 }
 
 .publication {
